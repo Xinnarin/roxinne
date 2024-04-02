@@ -1,0 +1,429 @@
+@import url('https://fonts.google.com/specimen/Silkscreen');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url("https://i.pinimg.com/originals/46/ac/9e/46ac9e282d3c303934a72d941845785b.gif") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Silkscreen', sans-serif;
+  font-size: 80px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5);
+}
+
+p {
+  font-family: 'Silkscreen', sans-serif;
+  color: #eed202;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5);
+  margin-right: 10px;
+  margin-left: 90px;
+  vertical-align: middle;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #123524 ;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px 10px;
+ 
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+           
+.username{
+
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  margin: 10px 0;
+ 
+}
+
+.page1{
+	margin: 0;
+    padding: 0;
+    background: url("https://i.pinimg.com/originals/93/9e/92/939e9273e3d6ef4f281cda31e9e62488.gif") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+}
+
+.bg {
+  animation: appearFromLeftBg 1s ease-out forwards;
+  background-color: rgba(255, 255, 255, 0.4);
+  background-size: 80px;
+  width: 80%;
+  height: 250px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 60px 50px 0 60px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 3px solid #800000;
+  overflow: hidden;
+   
+}
+
+img {
+  max-width: 150%;
+  height: 690px;
+  position: fixed;
+  bottom: 0;
+  left: -100%;
+  margin: 20px;
+  animation: appearFromLeftImg 1s ease-out forwards ; /* No delay */
+}
+
+.chartext {
+  font-family: 'Silkscreen';
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 8);
+  margin-right: 10px;
+  margin-left: 10px;
+  vertical-align: middle;
+  font-size: 22px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: calc(100% - 20px);
+  word-wrap: break-word; 
+  animation: textWrite 1.5s steps(30, end) 2.5s forwards; 
+&.delayed-animation {
+    animation-delay: 1s; /* Adjust the delay as needed */
+  }
+}
+
+.chartext::after {
+  content: '|';
+  animation: blinkCursor 0.5s infinite alternate 2.5s;  
+}
+
+@keyframes appearFromLeftBg {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes appearFromLeftImg {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes textWrite {
+  from {
+    width: 0;
+  }
+  to {
+    width: calc(100% - 20px);
+  }
+}
+
+@keyframes blinkCursor {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+.okaybut {
+      background-color: #800000;
+      color: #FFFFFF;
+      padding: 5px 15px;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      font-size: 13px;
+      position: absolute;
+      bottom: 30px;
+      right: 80px;
+}
+
+.okaybut:hover {
+      background-color: #246c3f;
+}
+
+.fade-out {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+}
+
+.home{
+	margin: 0;
+    padding: 0;
+    background: url("https://i.pinimg.com/originals/2e/a0/4d/2ea04d1328e24c8518401cc1f857b4ee.gif") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+}
+
+/* homepage.html*/
+
+.bghome {
+  background: rgba(0, 0, 0, 0.2);
+  background-size: 100px;
+  width: 95%;
+  height: 620px;
+  position: fixed;
+  
+  padding: 20px 30px 30px 30px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1.5px solid #000000;
+  overflow: hidden;
+   
+}
+
+.bghome .container{
+    padding:10px 5%;
+    padding-bottom: 100px;
+}
+
+
+.bghome .container .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 5fr));
+    gap:15px;
+}
+
+.bghome .container .box-container .box{
+    box-shadow: 0 5px 10px rgba(0,0,0,.3);
+    border-radius: 5px;
+	background: rgba(255, 255, 255, 0.2);
+	border: 1px solid black;
+    text-align: center;
+    padding:20px 20px;
+}
+
+.bghome .container .box-container .box img {
+    height: 200px;
+    position: center; 
+}
+
+.bghome .container .box-container .box h3{
+    color:yellow;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    font-size: 30px;
+    padding:10px 0;
+	font-family: 'Silkscreen', sans-serif;
+}
+
+
+
+.container .box-container .box .btn{
+    margin-top: 10px;
+    color:#FFFFFF;
+    font-size: 10px;
+	color: white;
+    border-radius: 5px;
+	
+    padding: 8px 25px;
+}
+
+.container .box-container .box .btn:hover{
+     color: red;
+	 transform: scale(1.05); /* Scale the button on hover */
+     
+}
+
+.container .box-container .box:hover{
+    box-shadow: 0 10px 15px rgba(0,0,0,.3);
+    transform: scale(1.03);
+}
+
+@media (max-width:768px){
+    .container{
+        padding:20px;
+    }
+}
+
+
+.blackbg{
+  background-color: rgba(0, 0, 0, 0.7);
+  background-size: 80px;
+  width:  1500px;
+  height: 2500px;
+  position: fixed;
+  bottom: 0;
+  left: 0; /* Change 'right' to 'left' */
+  padding: 60px 60px 0 50px; /* Adjust padding values as needed */
+  z-index: 2;
+}
+
+
+.bggirl {
+  animation: appearFromLeftBg 1s ease-out forwards;
+  background-color: rgba(255, 255, 255, 0.3);
+  background-size: 80px;
+  width: 80%;
+  height: 250px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 60px 50px 0 60px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid #800000;
+  overflow: hidden;
+   
+}
+
+img.pokemongirl {
+  max-width: 150%;
+  height: 690px;
+  position: fixed;
+  bottom: 0;
+  left: -100%;
+  margin: 20px;
+  animation: appearFromLeftImg 1s ease-out forwards ; /* No delay */
+}
+
+
+@keyframes appearFromLeftBg {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes appearFromLeftImg {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+
+.chartext {
+  font-family: 'Silkscreen';
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 8);
+  margin-right: 10px;
+  margin-left: 10px;
+  vertical-align: middle;
+  font-size: 22px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: calc(100% - 20px);
+  word-wrap: break-word; 
+  animation: textWrite 1.5s steps(30, end) 2.5s forwards; 
+&.delayed-animation {
+    animation-delay: 1s; /* Adjust the delay as needed */
+  }
+}
+
+.chartext::after {
+  content: '|';
+  animation: blinkCursor 0.5s infinite alternate 2.5s;  
+}
+
+
+
+@keyframes textWrite {
+  from {
+    width: 0;
+  }
+  to {
+    width: calc(100% - 20px);
+  }
+}
+
+@keyframes blinkCursor {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+.okaybut {
+      background-color: #800000;
+      color: #FFFFFF;
+      padding: 5px 15px;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      font-size: 13px;
+      position: absolute;
+      bottom: 30px;
+      right: 80px;
+}
+
+.okaybut:hover {
+      background-color: #246c3f;
+}
+
+.fade-out {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+}
+
+

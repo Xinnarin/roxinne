@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon Exploration</title>
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap">
+  <style>
+    .p2h1:hover {
+      color: red;
+      cursor: pointer;
+      animation: zoomIn 1s ease-in-out; /
+    }
+
+    @keyframes zoomIn {
+      0% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(1.7);
+      }
+    }
+
+    .p2h3:hover {
+      color: blue;
+    }
+
+    .p2h4:hover {
+      color: orange;
+    }
+
+    .p2h5:hover {
+      color: red;
+    }
+
+    .p2h6:hover {
+      color: red;
+    }
+
+    #arbok:hover,
+    #rapidash-evo:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease-in-out;
+      animation: shine 1s infinite;
+    }
+
+    @keyframes shine {
+      0% {
+        filter: brightness(1);
+      }
+
+      50% {
+        filter: brightness(1.5);
+      }
+
+      100% {
+        filter: brightness(1);
+      }
+    }
+
+    .tooltip {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      color: #333;
+      font-family: 'Silkscreen', sans-serif;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      top: 90%; /* Adjust the top position as needed */
+      left: 50%; /* Center horizontally */
+      transform: translate(-50%, 0); /* Center horizontally */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="blackbg">
+
+    <header>
+      <h1 class="p2h1" id="rapidashName">RAPIDASH</h1>
+      <h3 class="p2h3">#0078</h3>
+      <h4 class="p2h4">FIRE</h4>
+      <h5 class="p2h5">Generation 1</h5>
+      <h6 class="p2h6">Evolution:</h6>
+      <a href="homepage.html" class="back-button">Back</a>
+    </header>
+  </div>
+  <img src="images/rapidash.png" alt="arbok" id="arbok">
+  <img src="images/rapidash-evo.png" alt="rapidash-evo" id="rapidash-evo">
+
+  <div class="tooltip" id="rapidashTooltip">
+    Rapidash is a majestic Fire-type Pokémon known for its incredible speed and graceful appearance.
+  </div>
+
+  <script>
+    var rapidashName = document.getElementById('rapidashName');
+    var rapidashTooltip = document.getElementById('rapidashTooltip');
+
+    rapidashName.addEventListener('click', function() {
+      this.style.color = 'yellow';
+      showTooltip();
+      Action();
+    });
+
+    function Action() {
+      alert('Rapidash has changed to color Yellow!');
+    }
+
+    function showTooltip() {
+      rapidashTooltip.style.display = 'block';
+      setTimeout(function() {
+        rapidashTooltip.style.display = 'none';
+      }, 5000); 
+    }
+  </script>
+</body>
+
+</html>

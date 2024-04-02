@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon Exploration</title>
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap">
+  <style>
+    .p6h1:hover {
+      color: red;
+      cursor: pointer;
+      animation: zoomIn 1s ease-in-out; /
+    }
+
+    @keyframes zoomIn {
+      0% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(1.7);
+      }
+    }
+
+    .p6h3:hover {
+      color: blue;
+    }
+
+    .p6h4:hover {
+      color: grey;
+    }
+
+    .p6h5:hover {
+      color: red;
+    }
+
+    .p6h6:hover {
+      color: red;
+    }
+
+    #snorlax:hover,
+    #snorlax-evo:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease-in-out;
+      animation: shine 1s infinite;
+    }
+
+    @keyframes shine {
+      0% {
+        filter: brightness(1);
+      }
+
+      50% {
+        filter: brightness(1.5);
+      }
+
+      100% {
+        filter: brightness(1);
+      }
+
+    }
+
+    .tooltip {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      color: #333;
+      font-family: 'Silkscreen', sans-serif;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      top: 90%; /* Adjust the top position as needed */
+      left: 50%; /* Center horizontally */
+      transform: translate(-50%, 0); /* Center horizontally */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="blackbg">
+
+    <header>
+      <h1 class="p6h1" id="snorlaxName">SNORLAX</h1>
+      <h3 class="p6h3">#0143</h3>
+      <h4 class="p6h4">NORMAL</h4>
+      <h5 class="p6h5">Genaration 1</h5>
+      <h6 class="p6h6">Evolution:</h6>
+      <a href="homepage.html" class="back-button">Back</a>
+    </header>
+  </div>
+  <img src="images/snorlax.png" alt="snorlax" id="snorlax">
+  <img src="images/snorlax-evo.png" alt="snorlax-evo" id="snorlax-evo">
+
+  <div class="tooltip" id="snorlaxTooltip">
+    Snorlax is a sleeping Pokémon known for its huge appetite and powerful attacks.
+  </div>
+
+  <script>
+    var snorlaxName = document.getElementById('snorlaxName');
+    var snorlaxTooltip = document.getElementById('snorlaxTooltip');
+
+    snorlaxName.addEventListener('click', function() {
+      this.style.color = 'blue';
+      showTooltip();
+      Action();
+    });
+
+    function Action() {
+      alert('changed to color Blue!');
+    }
+
+    function showTooltip() {
+      snorlaxTooltip.style.display = 'block';
+      setTimeout(function() {
+        snorlaxTooltip.style.display = 'none';
+      }, 5000); 
+    }
+  </script>
+</body>
+
+</html>

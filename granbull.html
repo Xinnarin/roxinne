@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon Exploration</title>
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap">
+  <style>
+    .p5h1:hover {
+      color: red;
+      cursor: pointer;
+      animation: zoomIn 1s ease-in-out; /
+    }
+
+    @keyframes zoomIn {
+      0% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(1.7);
+      }
+    }
+
+    .p5h3:hover {
+      color: blue;
+    }
+
+    .p5h4:hover {
+      color: pink;
+    }
+
+    .p5h5:hover {
+      color: red;
+    }
+
+    .p5h6:hover {
+      color: red;
+    }
+
+    #granbull:hover,
+    #granbull-evo:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease-in-out;
+      animation: shine 1s infinite;
+    }
+
+    @keyframes shine {
+      0% {
+        filter: brightness(1);
+      }
+
+      50% {
+        filter: brightness(1.5);
+      }
+
+      100% {
+        filter: brightness(1);
+      }
+    }
+
+    .tooltip {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      color: #333;
+      font-family: 'Silkscreen', sans-serif;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      top: 90%; /* Adjust the top position as needed */
+      left: 50%; /* Center horizontally */
+      transform: translate(-50%, 0); /* Center horizontally */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="blackbg">
+
+    <header>
+      <h1 class="p5h1" id="granbullName">GRANBULL</h1>
+      <h3 class="p5h3">#0209</h3>
+      <h4 class="p5h4">FAIRY</h4>
+      <h5 class="p5h5">Genaration 2</h5>
+      <h6 class="p5h6">Evolution:</h6>
+      <a href="homepage.html" class="back-button">Back</a>
+    </header>
+  </div>
+  <img src="images/granbull.png" alt="granbull" id="granbull">
+  <img src="images/granbull-evo.png" alt="granbull-evo" id="granbull-evo">
+
+  <div class="tooltip" id="granbullTooltip">
+    Granbull is a Fairy-type Pokémon known for its strong and protective nature.
+  </div>
+
+  <script>
+    var granbullName = document.getElementById('granbullName');
+    var granbullTooltip = document.getElementById('granbullTooltip');
+
+    granbullName.addEventListener('click', function() {
+      this.style.color = 'pink';
+      showTooltip();
+      Action();
+    });
+
+    function Action() {
+      alert('Granbull has changed to color Pink!');
+    }
+
+    function showTooltip() {
+      granbullTooltip.style.display = 'block';
+      setTimeout(function() {
+        granbullTooltip.style.display = 'none';
+      }, 5000); // Hide the tooltip after 3 seconds
+    }
+  </script>
+</body>
+
+</html>

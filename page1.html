@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to the World of Pokémon</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap">
+ </head>
+
+<body class="page1">
+  <div class="bg">
+    <nav>
+      <p class="chartext" id="welcomeMessage" style="display: block;">
+      Welcome, Pokémon enthusiasts, to Pokémon Exploration, your ultimate guide to the diverse world of Pokémon characters and types!<br>Get ready to embark on a journey of knowledge and discovery.</p>
+    <button class="okaybut" id="okayButton" onclick="showNextParagraph()">Okay</button>
+    <p class="chartext delayed-animation fade-out" id="nextParagraph" style="display: none;">
+        In the Pokémon universe, a vast and magical world awaits filled with a <br>
+        myriad of fascinating creatures.<br>Are you ready to uncover the secrets of these extraordinary beings?
+
+.
+       <a href="homepage.html" class="okaybut">Okay</a>		
+      </p>
+    </nav>    
+  </div>
+  <img src="pokeboy.png" alt="pokemon girl">
+  </body>
+  
+  <script>
+    function showNextParagraph() {
+      var currentParagraph = document.getElementById('welcomeMessage');
+      var nextParagraph = document.getElementById('nextParagraph');
+
+      currentParagraph.classList.add('fade-out');
+      setTimeout(function () {
+        currentParagraph.style.display = 'none';
+        nextParagraph.style.display = 'block';
+        nextParagraph.classList.remove('fade-out');
+        document.getElementById('okayButton').style.display = 'none';
+      }, 1000); 
+    }
+	
+  </script>
+
+
+</html>

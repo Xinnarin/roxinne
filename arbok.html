@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon Exploration</title>
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap">
+  <style>
+    @import url('https://fonts.google.com/specimen/Silkscreen');
+
+    .p1h1:hover {
+      color: red;
+      cursor: pointer;
+      animation: zoomIn 1s ease-in-out; /
+    }
+
+    @keyframes zoomIn {
+      0% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(1.7);
+      }
+    }
+
+    .p1h3:hover {
+      color: blue;
+    }
+
+    .p1h4:hover {
+      color: violet;
+    }
+
+    .p1h5:hover {
+      color: red;
+    }
+
+    .p1h6:hover {
+      color: red;
+    }
+
+    #arbok:hover,
+    #arbok-evo:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease-in-out;
+      animation: shine 1s infinite;
+    }
+
+    @keyframes shine {
+      0% {
+        filter: brightness(1);
+      }
+
+      50% {
+        filter: brightness(1.5);
+      }
+
+      100% {
+        filter: brightness(1);
+      }
+    }
+
+    .tooltip {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      color: #333;
+      font-family: 'Silkscreen', sans-serif;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="blackbg">
+    <header>
+      <h1 class="p1h1" id="arbokName">ARBOK</h1>
+      <h3 class="p1h3">#0024</h3>
+      <h4 class="p1h4">POISON</h4>
+      <h5 class="p1h5">Generation 1</h5>
+      <h6 class="p1h6">Evolution:</h6>
+      <a href="homepage.html" class="back-button">Back</a>
+    </header>
+  </div>
+  <img src="images/arbok.png" id="arbok">
+  <img src="images/arbok-evo.png" alt="arbok-evo" id="arbok-evo">
+
+  <div class="tooltip" id="arbokTooltip">
+    Arbok is a Poison-type Pokémon known for its intimidating appearance and powerful attacks.
+  </div>
+
+  <script>
+    var arbokName = document.getElementById('arbokName');
+    var arbokTooltip = document.getElementById('arbokTooltip');
+
+    arbokName.addEventListener('click', function() {
+      this.style.color = 'violet';
+      showTooltip();
+      Action(); 
+    });
+
+    function Action() {
+      alert('changed to color Violet!');
+    }
+
+    function showTooltip() {
+      arbokTooltip.style.display = 'block';
+      setTimeout(function() {
+        arbokTooltip.style.display = 'none';
+      }, 5000); 
+    }
+  </script>
+
+</body>
+
+</html>

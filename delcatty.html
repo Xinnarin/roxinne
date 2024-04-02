@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon Exploration</title>
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap">
+  <style>
+    .p12h1:hover {
+      color: red;
+      cursor: pointer;
+      animation: zoomIn 1s ease-in-out; /
+    }
+
+    @keyframes zoomIn {
+      0% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(1.7);
+      }
+    }
+
+    .p12h3:hover {
+      color: blue;
+    }
+
+    .p12h4:hover {
+      color: grey;
+    }
+
+    .p12h5:hover {
+      color: red;
+    }
+
+    .p12h6:hover {
+      color: red;
+    }
+
+    #delcatty:hover,
+    #delcatty-evo:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease-in-out;
+      animation: shine 1s infinite;
+    }
+
+    @keyframes shine {
+      0% {
+        filter: brightness(1);
+      }
+
+      50% {
+        filter: brightness(1.5);
+      }
+
+      100% {
+        filter: brightness(1);
+      }
+    }
+
+    .tooltip {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      color: #333;
+      font-family: 'Silkscreen', sans-serif;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      top: 87%;
+      /* Adjust the top position as needed */
+      left: 50%;
+      /* Center horizontally */
+      transform: translate(-50%, 0);
+      /* Center horizontally */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="blackbg">
+
+    <header>
+      <h1 class="p12h1" id="delcattyName">DELCATTY</h1>
+      <h3 class="p12h3">#0301</h3>
+      <h4 class="p12h4">NORMAL</h4>
+      <h5 class="p12h5">Genaration 3</h5>
+      <h6 class="p12h6">Evolution:</h6>
+      <a href="homepage.html" class="back-button">Back</a>
+    </header>
+  </div>
+  <img src="images/delcatty.png" alt="delcatty" id="delcatty">
+  <img src="images/delcatty-evo.png" alt="delcatty-evo" id="delcatty-evo">
+  <div class="tooltip" id="delcattyTooltip">
+    Delcatty is a Normal-type Pokémon known for its elegant appearance and graceful movements.
+  </div>
+
+  <script>
+    var delcattyName = document.getElementById('delcattyName');
+    var delcattyTooltip = document.getElementById('delcattyTooltip');
+
+    delcattyName.addEventListener('click', function() {
+      this.style.color = 'pink';
+      showTooltip();
+      Action();
+    });
+
+    function Action() {
+      alert('changed to color Pink!');
+    }
+
+    function showTooltip() {
+      delcattyTooltip.style.display = 'block';
+      setTimeout(function() {
+        delcattyTooltip.style.display = 'none';
+      }, 5000); // Hide the tooltip after 5 seconds
+    }
+  </script>
+</body>
+
+</html>

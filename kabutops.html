@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon Exploration</title>
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap">
+  <style>
+    .p4h1:hover {
+      color: red;
+      cursor: pointer;
+      animation: zoomIn 1s ease-in-out; /
+    }
+
+    @keyframes zoomIn {
+      0% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(1.7);
+      }
+    }
+
+    .p4h3:hover {
+      color: blue;
+    }
+
+    .p4h4:hover {
+      background-image: linear-gradient(to right, gray, blue);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .p4h5:hover {
+      color: red;
+    }
+
+    .p4h6:hover {
+      color: red;
+    }
+
+    #kabutops:hover,
+    #kabutops-evo:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease-in-out;
+      animation: shine 1s infinite;
+    }
+
+    @keyframes shine {
+      0% {
+        filter: brightness(1);
+      }
+
+      50% {
+        filter: brightness(1.5);
+      }
+
+      100% {
+        filter: brightness(1);
+      }
+    }
+
+    .tooltip {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      color: #333;
+      font-family: 'Silkscreen', sans-serif;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      top: 90%; /* Adjust the top position as needed */
+      left: 50%; /* Center horizontally */
+      transform: translate(-50%, 0); /* Center horizontally */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="blackbg">
+
+    <header>
+      <h1 class="p4h1" id="kabutopsName">KABUTOPS</h1>
+      <h3 class="p4h3">#0141</h3>
+      <h4 class="p4h4">ROCK/WATER</h4>
+      <h5 class="p4h5">Genaration 1</h5>
+      <h6 class="p4h6">Evolution:</h6>
+      <a href="homepage.html" class="back-button">Back</a>
+    </header>
+  </div>
+  <img src="images/kabutops.png" alt="kabutops" id="kabutops">
+  <img src="images/kabutops-evo.png" alt="kabutops-evo" id="kabutops-evo">
+
+  <div class="tooltip" id="kabutopsTooltip">
+    Kabutops is a Rock/Water-type Pokémon known for its powerful slashing attacks and unique appearance.
+  </div>
+
+  <script>
+    var kabutopsName = document.getElementById('kabutopsName');
+    var kabutopsTooltip = document.getElementById('kabutopsTooltip');
+
+    kabutopsName.addEventListener('click', function() {
+      this.style.color = 'brown';
+      showTooltip();
+      Action();
+    });
+
+    function Action() {
+      alert('Kabutops has changed to color Brown!');
+    }
+
+    function showTooltip() {
+      kabutopsTooltip.style.display = 'block';
+      setTimeout(function() {
+        kabutopsTooltip.style.display = 'none';
+      }, 5000); // Hide the tooltip after 3 seconds
+    }
+  </script>
+</body>
+
+</html>

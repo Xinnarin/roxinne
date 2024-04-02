@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon Exploration</title>
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap">
+<style>
+    .p10h1:hover {
+      color: red;
+      cursor: pointer;
+      animation: zoomIn 1s ease-in-out; /
+    }
+
+    @keyframes zoomIn {
+      0% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(1.7);
+      }
+    }
+
+    .p10h3:hover {
+      color: blue;
+    }
+
+    .p10h4:hover {
+      color: orange;
+    }
+
+    .p10h5:hover {
+      color: red;
+    }
+
+    .p10h6:hover {
+      color: red;
+    }
+
+    #arcanine:hover,
+    #arcanine-evo:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease-in-out;
+      animation: shine 1s infinite;
+    }
+
+    @keyframes shine {
+      0% {
+        filter: brightness(1);
+      }
+
+      50% {
+        filter: brightness(1.5);
+      }
+
+      100% {
+        filter: brightness(1);
+      }
+    }
+	
+	.tooltip {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: 'Silkscreen', sans-serif;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  top:87%; /* Adjust the top position as needed */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, 0); /* Center horizontally */
+}
+  </style>
+</head>
+<body>
+
+  <div class="blackbg">
+  
+    <header>
+      <h1 class="p10h1" id="arcanineName"> ARCANINE</h1>
+      <h3 class="p10h3">#0059</h3>
+	  <h4 class="p10h4">FIRE</h4>
+	  <h5 class="p10h5">Genaration 1</h5>
+	  <h6 class="p10h6">Evolution:</h6>
+      <a href="homepage.html" class="back-button">Back</a>
+    </header>
+	</div>
+	<img src="images/arcanine.png" alt="arcanine" id="arcanine">
+	<img src="images/arcanine-evo.png" alt="arcanine-evo" id="arcanine-evo">
+	
+	 <div class="tooltip" id="arcanineTooltip">
+   Arcanine is a fiercely brave and loyal Pokémon. It is capable of running 6,200 miles in 24 hours with a speed and grace reminiscent of flight.
+  </div>
+  
+	<script>
+   var arcanineName = document.getElementById('arcanineName');
+var arcanineTooltip = document.getElementById('arcanineTooltip');
+
+arcanineName.addEventListener('click', function() {
+  this.style.color = 'orange';
+  showTooltip();
+  Action(); 
+});
+
+function Action() {
+  alert('changed to color Orange!');
+}
+
+function showTooltip() {
+  arcanineTooltip.style.display = 'block';
+  setTimeout(function() {
+    arcanineTooltip.style.display = 'none';
+  }, 5000); 
+}
+
+  </script>
+</body>
+
+</html>
